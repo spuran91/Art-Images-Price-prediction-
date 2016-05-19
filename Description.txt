@@ -1,0 +1,20 @@
+1. ABSTRACT:
+Data set consists of name of painting, artist name, size, price, number of views, number of favorites, date, subject, medium adding four new features visibility, user location, type, style,artistcard_link, and artist name. I have created a data set that can provide information and answer questions regarding paintings. 
+2. OBJECTIVE
+Using data mining tool ‘WEKA’ to do a multi-step data mining exercise. Interpreting the data well,
+understanding the structure of the data using one or more data mining algorithms, and presenting
+the findings.
+Mining data to extract knowledge from available data.
+3. BACKGROUND INFORMATION
+I have used a python script to build our database from the given website http://www.saatchiart.com/paintings/fine-art and then adopted the following classification features for describing the paintings; name of painting, artist name, size (if for instance 48"x64", then use
+3072 = 48x64), price, number of views, number of favorites, date, subject
+(http://www.art.com/shop/art-subjects/), medium (watercolor, canvas, oil, mixed media,...). we added the following four new features for describing these paintings; visibility, user location, type, style, artistcard_link, and artist name. After building the database, we went on data mining to find
+out how attribute price has acted as the decision feature and discretized it to have highest precision.
+4. DATA EXTRACTION
+I have used the following python script to extract the desired data from the website given.
+Beautiful soup 4 library has been used with python support for web scrapping.
+Additional dependencies used are urllib2 and regular expressions.
+A total of 312 images urls have been extracted in the inital file finear.py which are written into the file "urls_data_fineart_sample".
+This has been by done by having a base url as "http://www.saatchiart.com/paintings/fine-art" and append ?page= and count as variable which has a range from 0-312 as we have retrived 312 images.
+In the next file fineart_reading.py we have again used beautful soup to scrape through the body of each url and get the required fields and the date field has been extracted from the head of the web page and has been converted to suit the date format used in practice. 
+
